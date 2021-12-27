@@ -40,28 +40,62 @@ var (
 	objectDeletedResponse = gin.H{"deleted": true}
 	healthCheckResponse   = gin.H{"healthy": true}
 	welcomePageHTML       = []byte(`<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to ChartMuseum!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Welcome to ChartMuseum!</h1>
-<p>If you see this page, the ChartMuseum web server is successfully installed and
-working.</p>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../../view/assets/style.css" />
+		<title>Aqua Security Helm</title>
+	</head>
 
-<p>For online documentation and support please refer to the
-<a href="https://github.com/helm/chartmuseum">GitHub project</a>.<br/>
-
-<p><em>Thank you for using ChartMuseum.</em></p>
-</body>
-</html>
+	<body>
+		<div class="container column space-bottom">
+		<header class="header row justify-between">
+			<img src="./assets/aqua_logo.svg" alt="AquaL" />
+			<div class="row space-left">
+				<img src="../../../../view/assets/kubernetes.svg" alt="AquaK" />
+				<img
+				src="https://avatars3.githubusercontent.com/u/15859888?s=50&v=4"
+				alt="Aqua"
+			/>
+			</div>
+		</header>
+		<main class="main-content column space-bottom">
+			<h1 class="title">Welcome to the Aqua Security Helm Repository!</h1>
+			<p>
+			<a href="https://helm.sh/" target="_blank">Helm</a> must be installed
+			to use the charts. Please refer to Helm’s
+			<a href="https://helm.sh/docs/" target="_blank">documentation</a> to
+			get started.
+			</p>
+			<div class="column space-bottom">
+			<p>Once Helm is set up properly, add the repo as follows:</p>
+			<pre class="highlight-pre">
+				helm repo add aqua-helm https://helm.aquasec.com
+				</pre
+			>
+			</div>
+			<p>
+			To view all charts with
+			<a href="https://helm.aquasec.com/api/charts" target="_blank"
+				>the Charts API.</a
+			>
+			</p>
+			<p>
+			Or you can run <code>helm search repo aqua-helm</code> to see charts.
+			</p>
+			<p>
+			To the Aqua Security
+			<a href="https://github.com/aquasecurity/aqua-helm" target="_blank"
+				>Helm</a
+			>
+			GitHub source code repository
+			</p>
+		</main>
+		</div>
+	</body>
+	</html>
 	`)
 )
 
